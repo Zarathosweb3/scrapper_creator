@@ -179,10 +179,10 @@ class WebScraper:
                         if adresse_token:
                             try:
                                 creator_addr = self.get_contract_creator_basescan(
-                                    adresse_token, "6HSW2H9XS5SK2RM852AC7776KZCNRTGB39"
+                                    adresse_token, ""
                                 )
                                 hours_since_creation = self.get_wallet_age_in_hours(
-                                    creator_addr, "6HSW2H9XS5SK2RM852AC7776KZCNRTGB39"
+                                    creator_addr, ""
                                 )
                             except Exception as e:
                                 print(f"Impossible de récupérer l'adresse du créateur : {e}")
@@ -341,8 +341,8 @@ class WebScraper:
 
 # main.py
 def main():
-    telegram_token = '7666836262:AAGl1zYPDFpliy-lki0V51L1ZeYTGw4Dshs'
-    channel_id = '-1002497694021'
+    telegram_token = ''
+    channel_id = ''
 
     scraper = WebScraper(telegram_token, channel_id)
     try:
